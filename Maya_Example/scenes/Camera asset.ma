@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Camera asset.ma
-//Last modified: Mon, Aug 31, 2026 08:07:47 AM
+//Last modified: Mon, Aug 31, 2026 10:13:47 AM
 //Codeset: 1252
 requires maya "2027";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -12,13 +12,13 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202604221258-70da84b25e";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26200)";
-fileInfo "UUID" "C6BAC92C-4BEE-5140-9C31-9EAEB09D09FD";
+fileInfo "UUID" "C68FA994-4330-B7D9-3F02-929A88C2F744";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "AF2CDB17-4190-649E-8F68-44BDDFCD5A77";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -1.3464446467515376 6.2677604728347269 9.0578347894116504 ;
-	setAttr ".r" -type "double3" -34.1999999999924 -8.4 4.0188057619298037e-16 ;
+	setAttr ".t" -type "double3" -6.0700872166547022 0.83796691838783177 9.238987801189861 ;
+	setAttr ".r" -type "double3" -4.1999999999864128 -393.19999999999033 -2.3756351029087842e-16 ;
 	setAttr ".rpt" -type "double3" -5.6292364588427099e-16 -1.2657153691061948e-15 -1.0571362589839658e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C5FB5BC7-4A2A-867E-6C5C-93954F614FD0";
@@ -8349,7 +8349,6 @@ createNode transform -n "polySurface6";
 createNode mesh -n "polySurfaceShape11" -p "polySurface6";
 	rename -uid "21FBBB60-46C6-6796-4CA3-6BB065542E0C";
 	setAttr -k off ".v";
-	setAttr -s 2 ".iog[0].og";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 15 ".gtag";
@@ -12403,20 +12402,20 @@ createNode UsdDefaultSettings -n "UsdDefaultRenderSettings1";
 	setAttr ".asp" -type "string" "UsdDefaultRenderSettings,/Render/SceneRenderSettings";
 lockNode -l 1 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "620A21BF-46C1-F749-A240-A6B871780E96";
+	rename -uid "0975AD4D-4567-9298-E389-31A111A830EB";
 	setAttr -s 7 ".lnk";
 	setAttr -s 7 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "C9516CD5-4B24-F478-3D6A-088DBDA87713";
+	rename -uid "E5DD1977-480A-F439-A0D4-9C8DAB753160";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "15B50CFE-4457-985A-2821-3B88E9D27660";
+	rename -uid "7922B4C8-4245-8CFD-573A-C8A383523F1B";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "48AC1E07-4D29-0FC0-398F-D8B153DC90F2";
+	rename -uid "08A5C39B-4E46-F469-13F0-A98AE5EEB5AB";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "0857B232-46C9-6433-EDFA-9FB4B69630A9";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "2011D8A6-4C51-41D0-1352-DDA376237F57";
+	rename -uid "18D40AC0-4A08-BB0B-24CA-878E80F91548";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "B0F5644A-4188-7006-AED6-0C9454437B4F";
 	setAttr ".g" yes;
@@ -12623,7 +12622,6 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 2 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -12738,5 +12736,4 @@ connectAttr "lambert5.msg" ":defaultShaderList1.s" -na;
 connectAttr "lambert6.msg" ":defaultShaderList1.s" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "polySurfaceShape11.iog.og[0]" ":initialShadingGroup.dsm" -na;
 // End of Camera asset.ma
