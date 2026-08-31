@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Camera asset.ma
-//Last modified: Mon, Aug 31, 2026 10:21:13 AM
+//Last modified: Mon, Aug 31, 2026 10:27:44 AM
 //Codeset: 1252
 requires maya "2027";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202604221258-70da84b25e";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26200)";
-fileInfo "UUID" "8D953AD9-44FC-2FB4-3BEC-F08180F28706";
+fileInfo "UUID" "1199E723-4B71-1E10-A627-4081109936D0";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "AF2CDB17-4190-649E-8F68-44BDDFCD5A77";
@@ -101,7 +101,7 @@ createNode imagePlane -n "imagePlaneShape2" -p "imagePlane2";
 	rename -uid "BE04E39D-4ECF-BD12-D448-3889EE6CBD97";
 	setAttr -k off ".v";
 	setAttr ".fc" 202;
-	setAttr ".imn" -type "string" "C:/Users/11099132/Documents/Repos GK/UVU-animation/Maya_Example//photoins/top view.png";
+	setAttr ".imn" -type "string" "C:/Users/11099132/Documents/Repos GK/UVU-animation/Maya_Example/photoins/top view.png";
 	setAttr ".cov" -type "short2" 294 510 ;
 	setAttr ".dlc" no;
 	setAttr ".w" 2.94;
@@ -117,7 +117,7 @@ createNode imagePlane -n "imagePlaneShape3" -p "imagePlane3";
 	rename -uid "D5EA0DB9-45B3-DC7E-4D68-D681C4D861F1";
 	setAttr -k off ".v";
 	setAttr ".fc" 202;
-	setAttr ".imn" -type "string" "C:/Users/11099132/Documents/Repos GK/UVU-animation/Maya_Example//photoins/side view 1.png";
+	setAttr ".imn" -type "string" "C:/Users/11099132/Documents/Repos GK/UVU-animation/Maya_Example/photoins/side view 1.png";
 	setAttr ".cov" -type "short2" 379 482 ;
 	setAttr ".dlc" no;
 	setAttr ".w" 3.79;
