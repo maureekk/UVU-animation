@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: trainbaseredone.ma
-//Last modified: Wed, Sep 09, 2026 08:27:49 AM
+//Last modified: Wed, Sep 09, 2026 12:35:06 PM
 //Codeset: 1252
 requires maya "2027";
 requires "mtoa" "5.6.1.1";
@@ -12,7 +12,7 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202604221258-70da84b25e";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26200)";
-fileInfo "UUID" "18FE5693-4AE8-0B4D-58B8-71BD8B13119E";
+fileInfo "UUID" "E100DB01-4EBD-E801-46C1-A48B1F75D019";
 fileInfo "license" "education";
 createNode transform -n "trainbase";
 	rename -uid "3E317CB5-49F1-AA6A-AE14-0BB3BEC6046E";
@@ -3028,14 +3028,14 @@ createNode mesh -n "trainbaseShape" -p "trainbase";
 createNode transform -s -n "persp";
 	rename -uid "9B6ED94E-4B1E-43FC-D95B-EBB8792E82B3";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -9.162133462523558 10.055549333510386 20.947739837460087 ;
-	setAttr ".r" -type "double3" -1.7999999999999894 326.00000000000193 3.5966645090431182e-16 ;
+	setAttr ".t" -type "double3" -16.282240912785451 16.450186128862399 20.270674928605889 ;
+	setAttr ".r" -type "double3" -13.799999999999294 313.59999999999872 0 ;
 	setAttr ".rpt" -type "double3" 6.9272306217183e-16 4.7139644511575348e-16 4.5856180622505303e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "4E20D4A4-47A1-C8C7-E918-3889E19DFF31";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 25.161871605445842;
+	setAttr ".coi" 30.1215198708096;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
