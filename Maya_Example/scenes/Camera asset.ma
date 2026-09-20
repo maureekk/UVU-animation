@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Camera asset.ma
-//Last modified: Sat, Sep 19, 2026 06:26:53 PM
+//Last modified: Sat, Sep 19, 2026 06:41:32 PM
 //Codeset: 1252
 requires maya "2027";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,19 +11,19 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202607171511-52c21617ee";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "FB22BB0F-4EDF-BC3C-7A55-11B219B38A41";
+fileInfo "UUID" "A47B8EDD-44E1-C860-E996-39A27FAF070C";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "AF2CDB17-4190-649E-8F68-44BDDFCD5A77";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.28741303755694297 1.8158013473101953 -2.7129915018183457 ;
-	setAttr ".r" -type "double3" -13.800000000000058 -1281.1999999999039 0 ;
+	setAttr ".t" -type "double3" 2.851529436533863 10.384131759874291 6.7474381134929171 ;
+	setAttr ".r" -type "double3" -49.199999999999655 -1413.1999999999887 1.7816520359797914e-15 ;
 	setAttr ".rpt" -type "double3" -4.9619472448732228e-16 -1.3774759446147892e-15 -1.0685326206435316e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C5FB5BC7-4A2A-867E-6C5C-93954F614FD0";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 2.1652109413927496;
+	setAttr ".coi" 12.611792975521464;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -77,54 +77,8 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "imagePlane1";
-	rename -uid "18C461FD-4CB9-A669-FADD-70B50D003A18";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 0.010301779621533003 -7.2385424764145645 ;
-createNode imagePlane -n "imagePlaneShape1" -p "imagePlane1";
-	rename -uid "B25C18A5-46D0-8303-5B85-1AB339B8074A";
-	setAttr -k off ".v";
-	setAttr ".fc" 202;
-	setAttr ".imn" -type "string" "C:/Users/11099132/Documents/maya/photoins/front view.png";
-	setAttr ".cov" -type "short2" 469 343 ;
-	setAttr ".dlc" no;
-	setAttr ".w" 4.69;
-	setAttr ".h" 3.43;
-	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
-createNode transform -n "imagePlane2";
-	rename -uid "B13221DC-4BA1-7CA4-2989-669695013AF9";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 -0.003840070181691857 -0.23114137312649197 ;
-	setAttr ".r" -type "double3" -90 269.32189793417888 0 ;
-createNode imagePlane -n "imagePlaneShape2" -p "imagePlane2";
-	rename -uid "BE04E39D-4ECF-BD12-D448-3889EE6CBD97";
-	setAttr -k off ".v";
-	setAttr ".fc" 202;
-	setAttr ".imn" -type "string" "C:/Users/11099132/Documents/Repos GK/UVU-animation/Maya_Example/photoins/top view.png";
-	setAttr ".cov" -type "short2" 294 510 ;
-	setAttr ".dlc" no;
-	setAttr ".w" 2.94;
-	setAttr ".h" 5.1;
-	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
-createNode transform -n "imagePlane3";
-	rename -uid "095FB232-424F-40BC-39C6-1087D122FF84";
-	setAttr ".v" no;
-	setAttr ".t" -type "double3" -0.52079307870210112 0.074947092060825948 1.5424129194732985 ;
-	setAttr ".r" -type "double3" 0 270 0 ;
-	setAttr ".s" -type "double3" 0.58930667321504415 0.58930667321504415 1 ;
-createNode imagePlane -n "imagePlaneShape3" -p "imagePlane3";
-	rename -uid "D5EA0DB9-45B3-DC7E-4D68-D681C4D861F1";
-	setAttr -k off ".v";
-	setAttr ".fc" 202;
-	setAttr ".imn" -type "string" "C:/Users/11099132/Documents/Repos GK/UVU-animation/Maya_Example/photoins/side view 1.png";
-	setAttr ".cov" -type "short2" 379 482 ;
-	setAttr ".dlc" no;
-	setAttr ".w" 3.79;
-	setAttr ".h" 4.82;
-	setAttr ".cs" -type "string" "sRGB Encoded Rec.709 (sRGB)";
 createNode transform -n "backbuttons";
 	rename -uid "99DEE035-49F1-C8E0-F78C-F9A0B79A4046";
-	setAttr ".v" no;
 	setAttr ".rp" -type "double3" -1.0896328427938826 -0.056665707944871191 -0.75200406475438697 ;
 	setAttr ".sp" -type "double3" -1.0896328427938826 -0.056665707944871191 -0.75200406475438697 ;
 createNode mesh -n "backbuttonsShape" -p "backbuttons";
@@ -3038,7 +2992,6 @@ createNode mesh -n "backbuttonsShape" -p "backbuttons";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "cameralens";
 	rename -uid "31D68879-4E55-AF9A-91BD-A4923109F880";
-	setAttr ".v" no;
 	setAttr ".rp" -type "double3" 0.8255545273047149 -0.051217165913705842 0.49047660202588628 ;
 	setAttr ".sp" -type "double3" 0.8255545273047149 -0.051217165913705842 0.49047660202588628 ;
 createNode mesh -n "cameralensShape" -p "cameralens";
@@ -3345,7 +3298,6 @@ createNode mesh -n "cameralensShape" -p "cameralens";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "batteryentrance";
 	rename -uid "A7F4CFD8-4F25-2F35-B933-C09AF9B0E709";
-	setAttr ".v" no;
 	setAttr ".rp" -type "double3" 1.7495128353655121 1.1804677617462114 -0.17003154243262936 ;
 	setAttr ".sp" -type "double3" 1.7495128353655121 1.1804677617462114 -0.17003154243262936 ;
 createNode mesh -n "batteryentranceShape" -p "batteryentrance";
@@ -3502,7 +3454,6 @@ createNode mesh -n "batteryentranceShape" -p "batteryentrance";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "smallspheretop1";
 	rename -uid "3A17B5E0-4B80-C180-11C4-3B8164002947";
-	setAttr ".v" no;
 	setAttr ".rp" -type "double3" -0.43163546675316944 1.1838318050944905 -0.005250857387897323 ;
 	setAttr ".sp" -type "double3" -0.43163546675316944 1.1838318050944905 -0.005250857387897323 ;
 createNode mesh -n "smallspheretop1Shape" -p "smallspheretop1";
@@ -3668,7 +3619,6 @@ createNode mesh -n "smallspheretop1Shape" -p "smallspheretop1";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "lens";
 	rename -uid "381C569A-4292-50E2-79B0-35911929D279";
-	setAttr ".v" no;
 	setAttr ".rp" -type "double3" 0.81664175890547597 -0.057389827940749982 0.60190918732046028 ;
 	setAttr ".sp" -type "double3" 0.81664175890547597 -0.057389827940749982 0.60190918732046028 ;
 createNode mesh -n "lensShape" -p "lens";
@@ -5151,7 +5101,6 @@ createNode mesh -n "lensShape" -p "lens";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "screen";
 	rename -uid "77F19139-43FD-2118-925D-F89420E0763E";
-	setAttr ".v" no;
 	setAttr ".rp" -type "double3" 1.0850467595456577 0.088678885125808626 -0.71682410974204136 ;
 	setAttr ".sp" -type "double3" 1.0850467595456577 0.088678885125808626 -0.71682410974204136 ;
 createNode mesh -n "screenShape" -p "screen";
@@ -5283,7 +5232,7 @@ createNode mesh -n "dialShape" -p "dial";
 	setAttr ".gtag[8].gtagcmp" -type "componentList" 20 "f[101:102]" "f[104]" "f[106]" "f[108]" "f[110]" "f[112]" "f[114]" "f[116]" "f[118]" "f[120]" "f[122]" "f[124]" "f[126]" "f[128]" "f[130]" "f[132]" "f[134]" "f[136]" "f[138]" "f[160:239]";
 	setAttr ".gtag[9].gtagnm" -type "string" "topRing";
 	setAttr ".gtag[9].gtagcmp" -type "componentList" 0;
-	setAttr ".pv" -type "double2" 0.88585060834884644 0.17555128037929535 ;
+	setAttr ".pv" -type "double2" 0.81233865022659302 0.81586498022079468 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 336 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.98220998 0.37411749 0.96895993
@@ -5332,22 +5281,22 @@ createNode mesh -n "dialShape" -p "dial";
 		 0.33880842 0.43476066 0.36445338 0.43340173 0.36608651 0.47030255 0.40097809 0.46860275
 		 0.40226528 0.50528049 0.54359758 0.5019061 0.49497306 0.49737003 0.59194165 0.13347133
 		 0.6777364 0.10483501 0.6375196 0.086076804 0.59199947 0.078154199 0.54365778 0.081518099
-		 0.49503294 0.88175726 0.42180645 0.83624488 0.43582335 0.81233877 0.28435075 0.096020781
-		 0.44865948 0.1209038 0.40692598 0.78839833 0.43500954 0.74290192 0.41945145 0.15489301
+		 0.49503294 0.88175726 0.95332074 0.83624488 0.96733761 0.81233877 0.81586504 0.096020781
+		 0.44865948 0.1209038 0.40692598 0.78839833 0.96652383 0.74290192 0.95096576 0.15489301
 		 0.37199104 0.19619805 0.34565392 0.24262485 0.32927564 0.29169196 0.32370487 0.70420408
-		 0.39067602 0.67608833 0.35149673 0.3407605 0.32925853 0.38719225 0.34562206 0.42850345
-		 0.37194815 0.46250066 0.40687507 0.66130227 0.30574504 0.66129589 0.25789315 0.48739275
+		 0.92219031 0.67608833 0.88301098 0.3407605 0.32925853 0.38719225 0.34562206 0.42850345
+		 0.37194815 0.46250066 0.40687507 0.66130227 0.83725929 0.66129589 0.78940743 0.48739275
 		 0.44860277 0.49820882 0.49573201 0.50007957 0.49534118 0.50343251 0.5435493 0.50153905
-		 0.54352212 0.67607659 0.21262427 0.70420212 0.17437385 0.49559796 0.59147811 0.49378127
-		 0.59102589 0.475384 0.63574672 0.13479114 0.67648643 0.74292004 0.14689489 0.78843254
-		 0.13287808 0.13611989 0.67519295 0.10643654 0.63666016 0.1080785 0.63579452 0.087849461
+		 0.54352212 0.67607659 0.74413854 0.70420212 0.70588815 0.49559796 0.59147811 0.49378127
+		 0.59102589 0.475384 0.63574672 0.13479114 0.67648643 0.74292004 0.67840916 0.78843254
+		 0.66439235 0.13611989 0.67519295 0.10643654 0.63666016 0.1080785 0.63579452 0.087849461
 		 0.5915345 0.08966963 0.59108049 0.080003411 0.54360867 0.081900485 0.54358035 0.83627898
-		 0.13369186 0.88177538 0.14925 0.083345406 0.49540037 0.085218474 0.49579072 0.097728044
+		 0.66520613 0.88177538 0.68076432 0.083345406 0.49540037 0.085218474 0.49579072 0.097728044
 		 0.44942251 0.099480592 0.45020568 0.12239575 0.40804178 0.12393434 0.4091754 0.15608922
-		 0.37340054 0.15733142 0.37482986 0.92047334 0.17802556 0.94858915 0.21720488 0.19703388
+		 0.37340054 0.15733142 0.37482986 0.92047334 0.70953983 0.94858915 0.74871916 0.19703388
 		 0.34728372 0.1979081 0.34893927 0.24305488 0.33104095 0.24350703 0.33283964 0.29169264
-		 0.32551786 0.29169312 0.32736477 0.34033135 0.33102575 0.96337503 0.26295638 0.96338141
-		 0.31080818 0.33987972 0.33282682 0.92047495 0.39432725 0.94860089 0.35607725 0.38635671
+		 0.32551786 0.29169312 0.32736477 0.34033135 0.33102575 0.96337503 0.79447067 0.96338141
+		 0.84232247 0.33987972 0.33282682 0.92047495 0.92584157 0.94860089 0.88759154 0.38635671
 		 0.34725335 0.38548186 0.34891266 0.42730728 0.37335905 0.42606333 0.37479189 0.46100846
 		 0.40799201;
 	setAttr ".uvst[0].uvsp[250:335]" 0.45946869 0.40912774 0.48568574 0.44936642
@@ -6220,7 +6169,7 @@ createNode mesh -n "smspheretoptop1Shape" -p "smspheretoptop1";
 	setAttr ".gtag[8].gtagcmp" -type "componentList" 20 "f[101:102]" "f[104]" "f[106]" "f[108]" "f[110]" "f[112]" "f[114]" "f[116]" "f[118]" "f[120]" "f[122]" "f[124]" "f[126]" "f[128]" "f[130]" "f[132]" "f[134]" "f[136]" "f[138]" "f[160:239]";
 	setAttr ".gtag[9].gtagnm" -type "string" "topRing";
 	setAttr ".gtag[9].gtagcmp" -type "componentList" 0;
-	setAttr ".pv" -type "double2" 0.47201487421989441 0.64959609508514404 ;
+	setAttr ".pv" -type "double2" 0.79816079139709473 0.76852603554725651 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 336 ".uvst[0].uvsp";
 	setAttr ".uvst[0].uvsp[0:249]" -type "float2" 0.8078717 0.1597406 0.7594226
@@ -6267,7 +6216,7 @@ createNode mesh -n "smspheretoptop1Shape" -p "smspheretoptop1";
 		 0.32415694 0.2597411 0.30465993 0.260221 0.3065497 0.31245226 0.29862422 0.31245205
 		 0.30056846 0.36516216 0.30466774 0.36468238 0.30655664 0.41468805 0.32244295 0.41375521
 		 0.32417318 0.45807055 0.35093594 0.45673862 0.35240903 0.49277201 0.38855067 0.4911193
-		 0.3896808 0.51572794 0.48433134 0.51520222 0.53244233 0.77460635 0.43016016 0.50288504
+		 0.3896808 0.51572794 0.48433134 0.51520222 0.53244233 0.77460635 0.92467028 0.50288504
 		 0.57962424 0.47955334 0.62316746 0.17822722 0.66032159 0.1452945 0.62313586 0.12197156
 		 0.57958978 0.10966094 0.53240746 0.10914235 0.48429739 0.12050378 0.43796352 0.14311486
 		 0.39595518 0.17573419 0.36058679 0.21648593 0.33380741 0.2629821 0.31711218 0.31245139
@@ -6285,15 +6234,15 @@ createNode mesh -n "smspheretoptop1Shape" -p "smspheretoptop1";
 		 0.15975277 0.95700932 0.15975896 0.9550221 0.20617734 0.96892011 0.21492203 0.97531211
 		 0.25517911 0.96979946 0.25707963 0.94702882 0.21133742 0.97714955 0.25453573 0.95348585
 		 0.20702019 0.95184582 0.20806611 0.49029177 0.63024205 0.45504856 0.67003125 1.022306919
-		 0.21492562 0.95700824 0.16790541 0.44661584 0.66034973 0.72949153 0.41423669 0.79816085
-		 0.27401623;
-	setAttr ".uvst[0].uvsp[250:335]" 0.69110548 0.38458848 0.66320229 0.34412301
+		 0.21492562 0.95700824 0.16790541 0.44661584 0.66034973 0.72949153 0.90874684 0.79816085
+		 0.76852632;
+	setAttr ".uvst[0].uvsp[250:335]" 0.69110548 0.87909859 0.66320229 0.83863312
 		 0.45373797 0.66859287 0.48259625 0.62513953 0.48111209 0.62416828 0.44780114 0.66176385
-		 0.44895145 0.66310805 0.64850688 0.29680216 0.64845592 0.24725233 0.66305304 0.20031829
-		 0.69087476 0.16059034 0.72920418 0.13196063 0.77429026 0.11723832 0.82171541 0.1178721
-		 0.86683011 0.13379556 0.90521622 0.16344407 0.93311936 0.20390922 0.94781476 0.2512303
-		 0.94786566 0.30077994 0.93326867 0.34771407 0.90544677 0.38744175 0.86711752 0.41607174
-		 0.82203138 0.43079352 0.71139747 0.16787517 0.75942153 0.16788109 0.66337341 0.16786928
+		 0.44895145 0.66310805 0.64850688 0.79131228 0.64845592 0.74176246 0.66305304 0.69482839
+		 0.69087476 0.65510046 0.72920418 0.62647074 0.77429026 0.61174846 0.82171541 0.61238223
+		 0.86683011 0.62830567 0.90521622 0.65795422 0.93311936 0.69841933 0.94781476 0.74574041
+		 0.94786566 0.79529005 0.93326867 0.84222418 0.90544677 0.88195187 0.86711752 0.91058183
+		 0.82203138 0.92530364 0.71139747 0.16787517 0.75942153 0.16788109 0.66337341 0.16786928
 		 0.61492431 0.16786334 0.56579548 0.16785733 0.5159961 0.16785125 0.46578676 0.16784513
 		 0.41557735 0.16783901 0.36577803 0.16783293 0.31664905 0.16782692 0.26820001 0.167821
 		 0.22017586 0.16781513 0.17215176 0.16780929 0.12370269 0.16780345 0.074573822 0.16779746
@@ -12270,7 +12219,7 @@ createNode groupId -n "groupId66";
 	rename -uid "6AD8AAEF-4FBE-4881-80A8-7C956A1BDDD3";
 	setAttr ".ihi" 0;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "BF5C8F9C-427E-FB6C-BA4B-4AAA5CFA237C";
+	rename -uid "CED859BB-4286-AF00-E594-CDBC76A88D66";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" 518.55551866755536 -717.76898766330874 ;
 	setAttr ".tgi[0].vh" -type "double2" 1519.7288897073574 -34.793655513399024 ;
@@ -12330,21 +12279,6 @@ select -ne :hardwareRenderGlobals;
 select -ne :defaultHideFaceDataSet;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape1.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape1.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape1.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "imagePlaneShape1.ws";
-connectAttr ":frontShape.msg" "imagePlaneShape1.ltc";
-connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape2.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape2.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape2.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "imagePlaneShape2.ws";
-connectAttr ":topShape.msg" "imagePlaneShape2.ltc";
-connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape3.cme";
-connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape3.cmcf";
-connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape3.cmcp";
-connectAttr ":defaultColorMgtGlobals.wsn" "imagePlaneShape3.ws";
-connectAttr ":sideShape.msg" "imagePlaneShape3.ltc";
 connectAttr "groupId62.id" "backbuttonsShape.iog.og[0].gid";
 connectAttr "set1.mwc" "backbuttonsShape.iog.og[0].gco";
 connectAttr "groupId63.id" "lensShape.iog.og[1].gid";
